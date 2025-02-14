@@ -1,0 +1,10 @@
+<app-navigacija></app-navigacija>
+
+<h2 class="naslov">pregled filmova</h2>
+<div class="lista-filmova">
+  <div *ngFor="let item of listaMojiFilmovi">
+    <div class="film" routerLink="/filmoviPopis/{{ item.id }}">
+      {{ item.title }}
+    </div>
+  </div>
+</div>

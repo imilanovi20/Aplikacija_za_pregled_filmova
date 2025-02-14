@@ -1,0 +1,34 @@
+<app-navigacija></app-navigacija>
+<h2 class="naslov">Žanrovi</h2>
+<div class="gumbi">
+  <button (click)="ucitajMoje()">Ucitaj moje žanrove</button>
+  <button (click)="ucitajTMDB()">Ucitaj TMDB žanrove</button>
+  <button (click)="promijeniIme()">Promijeni naziv žanra</button>
+  <button (click)="izbrisi()">Izbriši one bez filma</button>
+  <button (click)="dodajZanr()">Dodaj iz TMDB-a u bazu</button>
+  <input
+    type="text"
+    id="imeNovo"
+    [(ngModel)]="imeNovo"
+    placeholder="Unesi novi naziv..."
+  />
+</div>
+<h3>TMDB zanrovi</h3>
+<div *ngFor="let item of listaTMDBzanrovi" class="zanrInput">
+  <input
+    type="radio"
+    name="zanr"
+    value="{{ item.name }}"
+    (change)="odabraniTMDB(item.id, item.name)"
+  />{{ item.name }}
+</div>
+
+<h3>Moji zanrovi</h3>
+<div *ngFor="let item of listaMojiZanrovi" class="zanrInput moji">
+  <input
+    type="radio"
+    name="moji"
+    value="{{ item.name }}"
+    (change)="odabraniMoji(item.id)"
+  />{{ item.name }}
+</div>

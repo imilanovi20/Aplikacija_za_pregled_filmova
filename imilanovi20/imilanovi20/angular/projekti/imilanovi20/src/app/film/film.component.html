@@ -1,0 +1,60 @@
+<app-navigacija></app-navigacija>
+<img
+  class="poster"
+  src="https://image.tmdb.org/t/p/w600_and_h900_bestv2{{
+    prikazaniFilm.poster_path
+  }}"
+  alt="poster"
+/>
+<button>galerija</button>
+
+<table class="tablica uska">
+  <tr>
+    <td>ID filma</td>
+    <td>{{ prikazaniFilm.id }}</td>
+  </tr>
+  <tr>
+    <td>Naslov filma</td>
+    <td>{{ prikazaniFilm.title }}</td>
+  </tr>
+  <tr>
+    <td>Opis filma</td>
+    <td>{{ prikazaniFilm.overview }}</td>
+  </tr>
+  <tr>
+    <td>Originalni naslov</td>
+    <td>{{ prikazaniFilm.original_title }}</td>
+  </tr>
+  <tr>
+    <td>Popularnost</td>
+    <td>{{ prikazaniFilm.popularity }}</td>
+  </tr>
+  <tr>
+    <td>Datum izlaska</td>
+    <td>{{ prikazaniFilm.release_date }}</td>
+  </tr>
+  <tr>
+    <td>Tagline</td>
+    <td>{{ prikazaniFilm.tagline }}</td>
+  </tr>
+  <tr>
+    <td>Film za odrasle</td>
+    <td>{{ prikazaniFilm.adult }}</td>
+  </tr>
+  <tr>
+    <td>IMDB ID</td>
+    <td>{{ prikazaniFilm.imdb_id }}</td>
+  </tr>
+  <tr>
+    <td>Originalni jezik</td>
+    <td>{{ prikazaniFilm.original_language }}</td>
+  </tr>
+  <tr>
+    <td>Backdrop path</td>
+    <td>{{ prikazaniFilm.backdrop_path }}</td>
+  </tr>
+  <tr>
+    <td>Unio korisnik ID</td>
+    <td>{{ prikazaniFilm.korisnik_id }}</td>
+  </tr>
+</table>

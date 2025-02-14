@@ -1,0 +1,7 @@
+<app-navigacija></app-navigacija>
+<div class="pocetna">
+  <h2 class="naslov">Moji žanrovi i filmovi prema njima</h2>
+  <div *ngFor="let item of listaMojiZanrovi" class="zanrInput">
+    <div>{{ item.name }}</div>
+  </div>
+</div>

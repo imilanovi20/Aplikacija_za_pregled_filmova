@@ -1,0 +1,565 @@
+<app-navigacija></app-navigacija>
+<div class="dokum">
+  <h1>Dokumentacija</h1>
+  <figure>
+    <a href="/assets/ja.jpg"
+      ><img src="/assets/ja.jpg" alt="Moja slika" width="350"
+    /></a>
+    <figcaption>Slika autora</figcaption>
+  </figure>
+
+  <div>
+    <ul>
+      <li>Ivan Milanović-Litre</li>
+      <li>imilanovi20@student.foi.hr</li>
+    </ul>
+  </div>
+</div>
+
+<div>
+  <table class="tablica">
+    <thead>
+      <tr>
+        <th>Resurs Parametri</th>
+        <th>GET</th>
+        <th>POST</th>
+        <th>PUT</th>
+        <th>DELETE</th>
+        <th>Ostalo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>api/korisnici</td>
+        <td>
+          <div>vraća listu korisnika</div>
+        </td>
+        <td>
+          <div>kreira novog korisnika</div>
+        </td>
+        <td><div>501</div></td>
+        <td><div>501</div></td>
+        <td><div>sve radi</div></td>
+      </tr>
+      <tr>
+        <td><div>api/korisnici/:korime</div></td>
+        <td>
+          <div>vraća određenog korisnika</div>
+        </td>
+        <td><div>405</div></td>
+        <td>
+          <div>Ažurira određenog korisnika</div>
+        </td>
+        <td><div>501</div></td>
+        <td><div>sve radi</div></td>
+      </tr>
+      <tr>
+        <td><div>api/korisnici/korime/aktivacija</div></td>
+        <td><div>501</div></td>
+        <td><div>405</div></td>
+        <td><div>Aktivira novog korisnika</div></td>
+        <td><div>501</div></td>
+        <td><div>sve radi</div></td>
+      </tr>
+      <tr>
+        <td><div>api/korisnici/korime/prijava</div></td>
+        <td><div>501</div></td>
+        <td>
+          <div>
+            Provjerava podatke prijave i vraća je li korisnik uspješno
+            prijavljen
+          </div>
+        </td>
+        <td><div>501</div></td>
+        <td><div>501</div></td>
+        <td><div>sve radi</div></td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            api/filmovi/?stranica=broj&brojFilmova=
+            broj[&datum=datum][&zanr=idZanr]
+            [&naziv=dioNazivFilma][&sortiraj=[d|z|n]]
+          </div>
+        </td>
+        <td>
+          <div>
+            vraća listu određenog broja filmova za neku stranicu (broj),
+            opcionalno filtrirano po datumu unosa (datum) i/ili žanru (idZanr)
+            i/ili nazivu filma (dioNazivFilma), te može sortirati uzlazno po
+            datumu(d), nazivu(n) ili žanru(z)
+          </div>
+        </td>
+        <td>
+          <div>
+            Uz dobivene podatke čita sve podatke o filmu s vanjskog servisa i
+            dodaje novi film
+          </div>
+        </td>
+        <td><div>501</div></td>
+        <td><div>501</div></td>
+        <td>
+          <div>
+            radi sve osim svih vrsta sortiranja i filtriranja na get metodi
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><div>api/filmovi/:id</div></td>
+        <td>
+          <div>Vraća podatke određenog filma (id)</div>
+        </td>
+        <td><div>405</div></td>
+        <td>
+          <div>Ažurira podatke određenog filma</div>
+        </td>
+        <td>
+          <div>Briše određeni film</div>
+        </td>
+        <td>
+          <div>sve radi</div>
+        </td>
+      </tr>
+      <tr>
+        <td><div>api/zanr/</div></td>
+        <td><div>Vraća listu žanrova</div></td>
+        <td><div>Dodaje novi žanr</div></td>
+        <td><div>501</div></td>
+        <td>
+          <div>Briše sve žanrove za koje ne postoji film</div>
+        </td>
+        <td><div>sve radi</div></td>
+      </tr>
+      <tr>
+        <td><div>api/zanr/:id</div></td>
+        <td>
+          <div>Vraća podatke određenog žanra (id)</div>
+        </td>
+        <td><div>405</div></td>
+        <td>
+          <div>Ažurira postojeći žanr</div>
+        </td>
+        <td><div>Briše određeni žanr</div></td>
+        <td><div>sve radi</div></td>
+      </tr>
+      <tr>
+        <td><div>api/tmdb/zanr</div></td>
+        <td>
+          <div>Prosljeđuje listu žanrova koji vrati servis TMDB</div>
+        </td>
+        <td><div>501</div></td>
+        <td><div>501</div></td>
+        <td><div>501</div></td>
+        <td><div>radi samo get</div></td>
+      </tr>
+      <tr>
+        <td>
+          <div>api/tmdb/filmovi?kljucnaRijec=rijec1[,rijec2]&stranica=broj</div>
+        </td>
+        <td>
+          <div>
+            Prosljeđuje listu filmova koju vrati servis TMDB, a čiji filmovi
+            imaju ključnu riječ ili više njih
+          </div>
+        </td>
+        <td><div>501</div></td>
+        <td><div>501</div></td>
+        <td><div>501</div></td>
+        <td><div>nije implementirano</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<table class="tablica">
+  <thead>
+    <tr>
+      <th>Uloga</th>
+      <th>Stranica/e</th>
+      <th>Opis</th>
+      <th>Detaljno</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gost</td>
+      <td><div>Početna</div></td>
+      <td>
+        Prikazuje popis žanrova u bazi podataka i nasumice prikazuje 2 filma za
+        svaki žanr koji postoje u bazi podataka.
+      </td>
+      <td>Jedino ne prikazuje filmove iz moje baze, nego iz TMDB-a</td>
+    </tr>
+    <tr>
+      <td>Gost</td>
+      <td><div>Dokumentacija</div></td>
+      <td>
+        <div>Prikazuje stranicu dokumentacija.html opisanu ranije</div>
+      </td>
+      <td>Sve radi</td>
+    </tr>
+    <tr>
+      <td>Gost</td>
+      <td>
+        <div>Registracija, Prijava, Odjava</div>
+      </td>
+      <td>
+        <div>
+          Gost se može se registrirati kao novi korisnik. Lozinka se u bazu ne
+          smije spremati u čitljivom obliku i treba koristiti sol kod spremanja.
+          Jednom prijavljeni korisnik može se odjaviti u bilo kojem trenutku.
+        </div>
+      </td>
+      <td>
+        <div>Prijava i odjava rade, ali bez hashiranja, nema registracije</div>
+      </td>
+    </tr>
+    <tr>
+      <td>Korisnik</td>
+      <td><div>Profil</div></td>
+      <td>
+        <div>
+          Vidi svoje podatke (ime, prezime, korisničko ime, e-mail, ...) i može
+          ih ažurirati. Korisničko ime i e-mail se ne mogu ažurirati.
+        </div>
+      </td>
+      <td>Nema ažuriranja, samo prikaz podataka je tu</td>
+    </tr>
+    <tr>
+      <td>Korisnik</td>
+      <td><div>Filmovi pregled</div></td>
+      <td>
+        <div>
+          Vidi popis svih filmova koji postoje u bazi, može filmove filtrirati
+          po žanru i/ili datumu unosa. Datumsko filtriranje čita podatke od
+          unesenog datuma do današnjeg datuma. Može uzlazno sortirati filmove po
+          nazivu filma, datumu ili nazivu žanra. Može kliknuti na naziv filma i
+          dobiti sve podatke o filmu.
+        </div>
+      </td>
+      <td>
+        Vidi se popis filmova u mojoj bazi, ali bez sortiranja i filtriranja i
+        straničenja
+      </td>
+    </tr>
+    <tr>
+      <td>Korisnik</td>
+      <td><div>Film</div></td>
+      <td>
+        <div>
+          Prikazuje sve podatke o filmu zajedno s posterom i poveznicom na
+          “Galerija slika” za taj film i podatkom koji korisnik je dodao film u
+          bazu.
+        </div>
+      </td>
+      <td>Svi se podaci iz baze prikažu</td>
+    </tr>
+    <tr>
+      <td>Korisnik</td>
+      <td>
+        <div>Filmovi pretraživanje</div>
+      </td>
+      <td>
+        <div>
+          Može upisati ključne riječi po kojima se pretražuju filmovi sa servisa
+          TMDB (preko api/tmdb). Broj stranica nalazi se u podatku
+          “total_pages”. Ako pronađe film koji mu se sviđa može kliknuti na
+          dodaj u bazu. Film se svim dobivenim podacima dodaje u bazu kao
+          prijedlog, ali čeka odobrenje admina da bude vidljiv u “Filmovi
+          pregled”. Nije potrebno spremati podatke o “production_companies”,
+          “production_countries” i “spoken_languages”. Ako već postoji prijedlog
+          za neki film tada nije moguće kliknuti dodaj u bazu
+        </div>
+      </td>
+      <td>
+        Nije implementirano. Filmovi (tj. samo je jedan) su hardkodirani u bazu
+      </td>
+    </tr>
+    <tr>
+      <td>Korisnik</td>
+      <td><div>Galerija slika</div></td>
+      <td>
+        <div>
+          Korisnik vidi galeriju slika postavljenih od strane svih korisnika za
+          odabrani film. Može pretraživati galeriju slika po datumu postavljanja
+          slike tako da unese od i/ili do datum. Može kliknuti na sliku te ga se
+          prebacuje na “Film”
+        </div>
+      </td>
+      <td>Nije implementirano</td>
+    </tr>
+    <tr>
+      <td>Korisnik</td>
+      <td><div>Slika</div></td>
+      <td>
+        <div>
+          Može postaviti novu sliku (samo jpg, jpeg, png ili gif maksimalne
+          veličine 500KB) za neki film koji postoji u bazi. Slika se sprema
+          fizički na poslužitelj unutar direktorija slike/id_filma/korime.
+          Direktorij označen sa id_filma predstavlja id filma pod kojim je film
+          spremljen u bazi, a direktroij korime je korisničko ime korisnika koji
+          je dodao sliku. Slika se sprema pod nazivom datum_hash.ekstenzija.
+          Datum je datum postavljanja slike u obliku “godina-mjesec-dan”, a hash
+          je generiran na temelju vremena i korisničkog imena. Ekstenzija je
+          originalna ekstenzija prenesene datoteke
+        </div>
+      </td>
+      <td>Nije implementirano</td>
+    </tr>
+    <tr>
+      <td>Admin</td>
+      <td><div>Filmovi prijedlozi</div></td>
+      <td>
+        <div>
+          Vidi popis filmova koji su poslani kao prijedlog za dodavanje, ako
+          odobri film postaje vidljiv svim korisnicima u pogledu “Filmovi
+          pregled”. Kod odobravanja filma preuzima se slika postera s TMDB koja
+          se sprema lokalno na poslužitelj u direktorij posteri. Ako ne odobri
+          film tada se on briše i može se opet kasnije dati kao prijedlog
+        </div>
+      </td>
+      <td>Nije implementirano</td>
+    </tr>
+    <tr>
+      <td>Admin</td>
+      <td><div>Žanrovi</div></td>
+      <td>
+        <div>
+          Vidi pregled svih žanrova u bazi podataka, može ažurirati naziv žanra,
+          može obrisati sve žanrove za koje nema filmova u bazi. Može povući
+          listu žanrova s TMDB servisa te može dodati u bazu sve ili samo neke
+          žanrove. Ako pri dodavanju, već postoji neki žanr s istim id-om, tada
+          se takav preskače i uopće se ne šalje zahtjev na servis za dodavanjem.
+          Korisniku se javlja poruka na ekranu koji žanrovi su bili preskočeni
+          jer već postoje
+        </div>
+      </td>
+      <td>Sve radi, jedino nema da se svi odjednom dodaju</td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <table class="tablica">
+    <thead>
+      <tr>
+        <th>Zadatak</th>
+        <th>Opis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          1. Na stranicu dokumentacija kreirati tablicu u kojoj jasno pišu
+          resursi iz prvog dijela (REST servis) su napravljene, a koje nisu
+          prema opisu tablice zadaće 1
+        </td>
+        <td>
+          <div>Napravljena</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          2. Na stranicu dokumentacija kreirati tablicu u kojoj jasno pišu
+          pogledi iz drugog dijela (APP) koji su implementirani, a koje nisu
+          prema opisu tablice zadaće 1.
+        </td>
+        <td>
+          <div>Napravljena</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          3. Na stranicu dokumentacija kreirati tablicu po koracima (počevši od
+          zadaci općenito) ovog dokumenta u kojoj jasno pišu elementi opisa 2
+          zadaće koji su napravljeni, koji nisu.
+        </td>
+        <td>
+          <div>Napravljena</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          5. U obje aplikacije složiti package.json tako da se sa npm start može
+          pokrenuti pojedini server. Kod kreiranja start skripte obavezno
+          definirati putanju na NODE_PATH gdje piše putanja do globalnih modula
+          kako je to rađeno na predavanjima i vježbama. Student/ica kod
+          testiranja tada može lako promijeniti tu putanju.
+        </td>
+        <td>
+          <div>
+            Napravljeno sve, ali pošto se radi na windowsu, nije trebao dio sa
+            NODE_PATH-om (osim prema uputama kolege Frica s foruma)
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          6. Kod predavanja izbrisati svoje ključeve za TMDB servis iz
+          konfiguracijske datoteke svaki student ubacuje svoje ključeve u
+          datoteku kod testiranja.
+        </td>
+        <td>
+          <div>Napravljeno.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          7. REST servis funkcionalno ostaje isti međutim potrebno je napraviti
+          sljedeće izmjene: a. Da radi sa SQLite bazom podataka b. Da koristi
+          port koji se čita iz konfiguracijske datoteke pod nazivom: rest.port
+        </td>
+        <td>
+          <div>
+            Radi s novom bazom, ali su portovi hardkodirani - 7000 je rest, a
+            7001 je app
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          8. REST servis može dodatno ima parameter kod resursa api/filmovi koji
+          omogućuje dohvat samo odobrenih ili ne odobrenih filmova. Nije
+          obavezno.
+        </td>
+        <td>
+          <div>Nije bilo potrebe za ovim</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          9. REST servis ne korsiti više username i password već prima JWT i
+          tako validira input. Varijanta sa username i password nosi manje
+          bodova
+        </td>
+        <td>
+          <div>
+            Nije implementirano s jwtom, ne koristi više username i password
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10. Za dodatne bodove može se prebaciti cijeli REST servis u
+          TypeScript. Kod pokretanja sa npm start obavezno se mora napraviti
+          recomplike TypeScript-a i korpitanje svih bitnih statičnih sadržaja da
+          aplikacija normalno radi.
+        </td>
+        <td>
+          <div>Nije implementirano</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          11. Klientski dio Web Aplikacije HTML, CSS i JS na strani klijenta
+          prebaciti u Angular sa TypeScript-om
+        </td>
+        <td>
+          <div>Napravljeno prema tablici 2</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          12. Informacije o portovima na servise koje koristi Angular aplikacija
+          čita iz environment datoteke. Hard kodirana varijanta nosi manje
+          bodova.
+        </td>
+        <td>
+          <div>Nije napravljeno - navedeno u pitanju 7</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          13. Dizajn treba prebaciti korištenjem Sass preprocesora u Sass ili
+          Scss sintaksi. Čisti CSS ili bootstrap varijante nose 0 bodova.
+        </td>
+        <td>
+          <div>Napravljeno</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          14. Dodati reCaptcha v3 sustav na minimalno 3 obrazaca od kojih su
+          obavezni: prijava, registracija i jedan po izboru.
+        </td>
+        <td>
+          <div>Nije napravljeno</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          15. Pozadinski dio web aplikacije poslužuje Angular web aplikaciju.
+          Moguće je pokretanje angular aplikacije preko live servera sa ng
+          serve, ali ta varijanta nosi manje bodova
+        </td>
+        <td>
+          <div>
+            Napravljeno da pozadinski dio web aplikacije poslužuje Angular web
+            aplikaciju
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          16. Pozadinski dio web aplikacije poslužuje dokumentaciju - moguće je
+          dokumentaciju ugraditi u samu angular aplikaciju.
+        </td>
+        <td>
+          <div>Napravljeno da je ona komponenta</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          17. Pozadinski dio web aplikaciije nudi REST api podršku za klijentsku
+          stranu sa resursima koji ne postoje u REST servisu npr.
+          autentifikacija korisnika i generiranje JWT-a
+        </td>
+        <td>
+          <div>
+            Podrška postoji, ali se u aplikaciji ne hashira lozinka pa se ne
+            koristi
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          18. Pozadinski dio port se mora čitati iz konfiguracijske datoteke iz
+          podatka: app.port
+        </td>
+        <td>
+          <div>Nije napravljeno</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19. Izbaciti TOTP i aktivaciju mailom kod prijave. Inicijalno mora
+          postojati korisnik iz svake uloge koji nema TOTP i već je aktiviran i
+          treba navesti podatke na stranici prijava radi lakšeg testiranja
+        </td>
+        <td>
+          <div>Napravljeno sve</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          20. Angular aplikacija smije direktno komunicirati sa REST servisom,
+          ali mora obavezno slati JWT. Varijanta bez JWT-a nosi manje bodova.
+        </td>
+        <td>
+          <div>Napravljeno, ali ne šalje jwt</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          21. Za dodatne bodove može se prebaciti cijeli pozadinski dio web
+          aplikacije u TypeScript. Kod pokretanja sa npm start obavezno se mora
+          napraviti recomplike TypeScript-a i korpitanje svih bitnih statičnih
+          sadržaja da aplikacija normalno radi
+        </td>
+        <td>
+          <div>Nije napravljeno</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

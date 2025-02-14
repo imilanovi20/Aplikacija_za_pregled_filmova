@@ -1,0 +1,10 @@
+<app-navigacija></app-navigacija>
+<div class="prijava">
+  <label>Korisnicko ime</label>
+  <input type="text" (change)="unosKorime($event)" />
+  <label>Lozinka</label>
+  <input type="password" (change)="unosLoz($event)" />
+</div>
+<button (click)="prijava()">Prijavi se</button>
+<h3>admin: korisnicko ime=administrator, lozinka=rwa</h3>
+<h3>korisnik: korisnicko ime=obican, lozinka=rwa</h3>
