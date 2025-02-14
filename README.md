@@ -1,5 +1,7 @@
 # Aplikacija za pregled filmova
 
+Na ovom repozitoriju nalazi se projekt iz kolegija *Razvoj web aplikacija* na Fakultetu organizacije i informatike.
+
 Aplikacija za pregled filmova koristi TMDB API za dohvat informacija o filmovima.
 Aplikacija je izgrađena s Angularom za frontend i Node.js za backend.
 
