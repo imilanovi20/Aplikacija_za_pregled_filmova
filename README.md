@@ -1,4 +1,4 @@
-# Aplikacija_za_pregled_filmova
+# Aplikacija za pregled filmova
 
 Aplikacija za pregled filmova koristi TMDB API za dohvat informacija o filmovima.
 Aplikacija je izgrađena s Angularom za frontend i Node.js za backend.
